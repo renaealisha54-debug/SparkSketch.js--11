@@ -1,0 +1,13 @@
+spark-sketch/
+├── src/
+│   ├── components/
+│   │   ├── Editor/
+│   │   │   ├── CodeEditor.tsx          # (use the improved version I gave last)
+│   │   │   ├── FileTabs.tsx            # ← NEW
+│   │   │   └── FileItem.tsx
+│   ├── services/
+│   │   ├── aetherBridge.ts             # ← We'll upgrade this
+│   │   └── projectService.ts           # ← NEW for managing multiple files
+│   ├── types/
+│   │   └── project.ts                  # ← NEW
+│   └── ... (rest stays the same)
