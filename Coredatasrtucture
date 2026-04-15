@@ -1,0 +1,10 @@
+// Suggested state structure for terminal logs
+interface LogEntry {
+  id: string;
+  type: 'info' | 'error' | 'success';
+  message: string;
+  timestamp: number;
+}
+
+// Inside your component
+const [logs, setLogs] = useState<LogEntry[]>([]);
