@@ -1,0 +1,11 @@
+import { eventBus } from './eventBus';
+
+export const runScript = (code: string) => {
+  try {
+    // Example: Intercepting a log
+    const result = eval(code); 
+    eventBus.emit('terminal:log', { message: String(result), type: 'success' });
+  } catch (error: any) {
+    eventBus.emit('terminal:log', { message: error.message, type: 'error' });
+  }
+};
